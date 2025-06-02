@@ -5,6 +5,23 @@ import platform
 from pathlib import Path
 
 
+"""
+Configuration file handler for the network automation project.
+
+This module provides the Config class, which loads and manages configuration
+data from a JSON file located in the 'config' folder inside the
+'config_parser' package directory. If no path is specified, the default
+location is 'src/config_parser/config/config.json' relative to the project root.
+
+Classes:
+    Config: Handles loading and accessing configuration data from a JSON file.
+
+Usage:
+    from config_parser.config import Config
+    config = Config()  # Loads from default path
+    config = Config(config_path="custom/path/to/config.json")  # Loads from custom path
+    print(config.config)  # Access the configuration dictionary
+"""
 class Config:
     def __init__(self, config_path: str = None):
         if config_path is None:
