@@ -1,0 +1,5 @@
+pyyaml
+netmiko
+requests
+nornir
+python-dotenv
